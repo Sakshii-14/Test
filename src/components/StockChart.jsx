@@ -107,10 +107,10 @@ function StockChart() {
     Current Price: <span className="font-bold text-xl">{currentPrice}</span>
   </p>
   <p className="text-slate-700 text-lg font-medium">
-    Increment: <span className="text-green-400 font-bold">+{increment}</span>
+    Increment: <span className={`${increment > 0 ? 'text-green-400':'text-red-500'}`}>{increment > 0 ? `+ ${increment}` : increment} </span>
   </p>
   <p className="text-slate-700 text-lg font-medium">
-    Percentage Change: <span className="text-green-400 font-bold">{percentChange}%</span>
+    Percentage Change: <span className={`${increment > 0 ? 'text-green-400':'text-red-500'}`}>{percentChange > 0 ? `+ ${percentChange}` : percentChange}%</span>
   </p>
 </div>
         )
