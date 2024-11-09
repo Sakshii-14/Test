@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 
 function useStockData(symbol ) {
-  const apikey = import.meta.env.VITE_API_KEY;
-  const url = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${symbol}&outputsize=full&apikey=${apikey}`;
+  
+  const url = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${symbol}&outputsize=full&apikey=demo`;
 
   const [currentPrice, setCurrentPrice] = useState(0);
   const [loading, setLoading] = useState(true);
